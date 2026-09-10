@@ -9,17 +9,17 @@ def get_ticket():
     return tickets
 
 # function displaying how many tickets after user purchase
-def display_result(tickets_remaining):
-    print("Tickets remaining: ", tickets_remaining)
+def display_result(total_tickets):
+    print("Tickets remaining: ", total_tickets)
 
 # beginning variable
 def main():
-    tickets_remaining = 10
+    total_tickets = 10
     buyers = 0
 
 # loop until tickets end
-    while tickets_remaining > 0:
-        display_result(tickets_remaining)
+    while total_tickets > 0:
+        display_result(total_tickets)
         tickets_requested = get_ticket()
 
     # user may only buy between 1 and 4 tickets
@@ -27,15 +27,15 @@ def main():
             print("You may purchase between 1 and 4 tickets!")
 
     # only 20 tickets no more
-        elif tickets_requested > tickets_remaining:
+        elif tickets_requested > total_tickets:
             print("There are not enough tickets!")
 
     # buyer and ticket counter
         else:
-            tickets_remaining = tickets_remaining - tickets_requested
+            total_tickets = total_tickets - tickets_requested
             buyers += 1
 
-            display_result(tickets_remaining)
+            display_result(total_tickets)
 
     # print results
     print("All tickets have been sold!")
