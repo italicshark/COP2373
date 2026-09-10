@@ -5,7 +5,7 @@
 
 # function asking the user how many they would like to buy
 def get_ticket():
-    tickets = int(input("How many tickets would you like to buy?: "))
+    tickets = int(input("Enter how many tickets you need?: "))
     return tickets
 
 # function displaying how many tickets after user purchase
